@@ -1,1 +1,22 @@
 # Just create any Type and query you'd like!
+type Query {
+  welcome: WelcomeMessage!
+}
+
+type Mutation {
+  createAnimal(input: AnimalInput!): Animal
+}
+
+input AnimalInput {
+  name: String!
+  species: String!
+}
+
+type Animal {
+  name: String!
+  species: String!
+}
+
+type WelcomeMessage {
+  message: String!
+}
